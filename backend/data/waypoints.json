@@ -1,0 +1,30 @@
+{
+  "waypoints": [
+    {
+      "latitude": 37.2103939,
+      "longitude": 27.5794894
+    },
+    {
+      "latitude": 37.2104271,
+      "longitude": 27.5795765
+    },
+    {
+      "latitude": 37.2103966,
+      "longitude": 27.579631
+    },
+    {
+      "latitude": 37.2104156,
+      "longitude": 27.5797006
+    },
+    {
+      "latitude": 37.2103864,
+      "longitude": 27.5797607
+    },
+    {
+      "latitude": 37.2103936,
+      "longitude": 27.579949
+    }
+  ],
+  "timestamp": "2025-11-28T19:59:13.088927Z",
+  "mission_name": "yildizusv_mission"
+}

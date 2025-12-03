@@ -1,0 +1,62 @@
+.debug-panel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+  font-family: monospace;
+  font-size: 12px;
+  min-width: 280px;
+}
+
+.debug-panel__header {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.debug-panel__status {
+  margin-bottom: 8px;
+}
+
+.debug-panel__status--ready {
+  color: #00ff00;
+}
+
+.debug-panel__status--not-ready {
+  color: #ff0000;
+}
+
+.debug-panel__section {
+  margin-bottom: 10px;
+}
+
+.debug-panel__section-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #00bfff;
+}
+
+.debug-panel__info {
+  margin-bottom: 3px;
+  font-size: 11px;
+}
+
+.debug-panel__info--no-data {
+  color: #888;
+  font-style: italic;
+}
+
+.debug-panel__waypoint-info {
+  margin-bottom: 3px;
+  font-size: 11px;
+}
+
+.debug-panel__waypoint-info--no-waypoints {
+  color: #888;
+  font-style: italic;
+}

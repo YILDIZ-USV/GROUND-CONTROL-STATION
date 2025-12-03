@@ -1,0 +1,17 @@
+
+
+
+.indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Yatayda ortalar */
+  align-items: center;    /* Dikeyde ortalar */
+  position: fixed;
+  top:15%;               /* Dikey ortalamak için */
+  left: 50%;              /* Yatay ortalamak için */
+  transform: translate(-50%, -50%); /* Tam ortalamak için */
+  z-index: 1000;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 200px; /* Elemanlar arası boşluk */
+}

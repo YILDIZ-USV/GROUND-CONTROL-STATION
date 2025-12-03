@@ -1,0 +1,97 @@
+.nav2-plan-controls {
+  position: absolute;
+  top: 500px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 15px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1000;
+  min-width: 280px;
+}
+
+.nav2-plan-controls h3 {
+  margin: 0 0 10px 0;
+  color: #00ff00;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.plan-toggle {
+  position: relative;
+  width: 50px;
+  height: 24px;
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-toggle.active {
+  background: #00ff00;
+  border-color: #00ff00;
+}
+
+.plan-toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.plan-toggle.active .plan-toggle-slider {
+  transform: translateX(26px);
+}
+
+.plan-toggle-label {
+  font-size: 12px;
+  color: #ccc;
+  user-select: none;
+}
+
+.plan-status {
+  font-size: 11px;
+  color: #888;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #333;
+}
+
+.plan-status.valid {
+  color: #00ff00;
+}
+
+.plan-status.invalid {
+  color: #ff4444;
+}
+
+.plan-status.loading {
+  color: #ffaa00;
+}
+
+.plan-info {
+  font-size: 10px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.plan-info span {
+  color: #00ff00;
+  font-weight: bold;
+}

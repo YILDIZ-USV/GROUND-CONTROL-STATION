@@ -1,0 +1,88 @@
+{
+  "name": "yildizusv_v1",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.8.1",
+  "description": "Vite + React + Electron with Doubleshot, so fast!",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "rimraf dist && vite",
+    "debug": "rimraf dist && vite -- --dsb-debug",
+    "build": "rimraf dist && vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "postinstall": "electron-builder install-app-deps",
+    "dev:renderer": "vite --config vite.config.mts --mode development",
+    "build:renderer": "vite build --config vite.config.mts --mode production",
+    "package:electron-app:mac": "electron-builder build --mac --publish never",
+    "package:electron-app:win": "electron-builder build --win --publish never",
+    "package:electron-app:linux": "electron-builder build --linux --publish never",
+    "clean": "rimraf dist node_modules/.vite && taskkill /f /im electron.exe || exit 0",
+    "backend": "cd backend/server && python3 main.py",
+    "dev:full": "concurrently \"pnpm dev\" \"pnpm backend\"",
+    "start:all": "concurrently \"npm run dev\" \"npm run backend\""
+  },
+  "dependencies": {
+    "@doubleshot/nest-electron": "^0.2.6",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@grpc/proto-loader": "^0.7.15",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
+    "@mui/material": "^7.0.2",
+    "@mui/styled-engine": "^7.0.2",
+    "@nestjs/common": "^11.0.9",
+    "@nestjs/core": "^11.0.9",
+    "@nestjs/microservices": "^11.0.9",
+    "@reduxjs/toolkit": "^2.7.0",
+    "axios": "^1.8.4",
+    "cesium": "^1.128.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-lottie-player": "^2.1.0",
+    "react-redux": "^9.2.0",
+    "react-typescript-flight-indicators": "^1.0.4",
+    "reflect-metadata": "^0.2.2",
+    "resium": "^1.19.0-beta.1",
+    "rxjs": "^7.8.1",
+    "three": "^0.175.0",
+    "three-orbitcontrols": "^2.110.2",
+    "vite-plugin-cesium": "^1.2.23",
+    "vite-plugin-static-copy": "^2.3.1"
+  },
+  "devDependencies": {
+    "@lightwing/eslint-config": "^1.0.104",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^35.0.0",
+    "electron-builder": "^26.0.0",
+    "eslint": "^9.20.1",
+    "lint-staged": "^15.4.3",
+    "rimraf": "^6.0.1",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
+    "vite-plugin-doubleshot": "^0.0.18",
+    "concurrently": "^9.0.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@nestjs/core",
+      "electron"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md,json,yml}": [
+      "eslint --fix"
+    ]
+  },
+  "overrides": {
+    "react-typescript-flight-indicators": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    }
+  }
+}

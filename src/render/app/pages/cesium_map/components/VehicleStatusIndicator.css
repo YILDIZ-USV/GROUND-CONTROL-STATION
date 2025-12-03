@@ -1,0 +1,43 @@
+.vehicle-status {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  font-family: monospace;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.vehicle-status__section {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.vehicle-status__divider {
+  width: 1px;
+  height: 20px;
+  background-color: #666;
+}
+
+.vehicle-status__armed {
+  color: #4CAF50;
+  margin-left: 5px;
+}
+
+.vehicle-status__disarmed {
+  color: #F44336;
+  margin-left: 5px;
+}
+
+.vehicle-status__mode {
+  color: #2196F3;
+  margin-left: 5px;
+}
